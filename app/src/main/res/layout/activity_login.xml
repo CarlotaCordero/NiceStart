@@ -12,7 +12,7 @@
         android:id="@+id/girl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
+        android:scaleType="fitStart"
         android:src="@drawable/girl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -72,21 +72,19 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Login"
         app:layout_constraintEnd_toStartOf="@id/der"
         app:layout_constraintStart_toEndOf="@id/izq"
-        app:layout_constraintTop_toBottomOf="@id/til2" />
+        app:layout_constraintTop_toBottomOf="@id/til2"
+        style="@style/buttonFlat" />
 
     <Button
         android:id="@+id/singup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Sign Up"
         app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintEnd_toStartOf="@id/der"
-        app:layout_constraintTop_toBottomOf="@id/login" />
+        app:layout_constraintTop_toBottomOf="@id/login"
+        style="@style/buttonOutline" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/der"
