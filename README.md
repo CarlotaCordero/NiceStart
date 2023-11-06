@@ -50,6 +50,7 @@ En caso de pulsar en *Sign Up* nos mandaria al *Main Activity*.
 ![Captura del Main Activity](img/Screenshot_20231106_140118.png)
 
 Como sucedía en el *Register* tenemos un **Action Bar** en la parte superior pero con la vista en blanco. A la hora de utilizar las **Flags** esto nos permite no tener que volver a la pantalla de *Login*.
+
 Seguid atentos para nuevas actualizaciones :octocat:.
 
 > [!NOTE]
