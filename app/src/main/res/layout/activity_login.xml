@@ -7,7 +7,6 @@
     android:background="@drawable/gradient_login"
     tools:context=".Login">
 
-
     <ImageView
         android:id="@+id/girl"
         android:layout_width="match_parent"
@@ -72,19 +71,21 @@
 
     <Button
         android:id="@+id/login"
+        style="@style/buttonFlat"
+        android:onClick="openMain"
         android:text="Login"
         app:layout_constraintEnd_toStartOf="@id/der"
         app:layout_constraintStart_toEndOf="@id/izq"
-        app:layout_constraintTop_toBottomOf="@id/til2"
-        style="@style/buttonFlat" />
+        app:layout_constraintTop_toBottomOf="@id/til2" />
 
     <Button
         android:id="@+id/singup"
+        style="@style/buttonOutline"
+        android:onClick="openRegister"
         android:text="Sign Up"
-        app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintEnd_toStartOf="@id/der"
-        app:layout_constraintTop_toBottomOf="@id/login"
-        style="@style/buttonOutline" />
+        app:layout_constraintStart_toEndOf="@id/izq"
+        app:layout_constraintTop_toBottomOf="@id/login" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/der"

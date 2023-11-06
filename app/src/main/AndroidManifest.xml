@@ -12,9 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NiceStart"
         tools:targetApi="31">
-        <activity
-            android:name=".Register"
-            android:exported="false" />
+
         <activity
             android:name=".Login"
             android:exported="true">
@@ -24,6 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".Register"
+            android:exported="false"
+            android:parentActivityName=".Login"
+            android:theme="@style/ThemeActionBar.NiceStart"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/ThemeActionBar.NiceStart" />
+
     </application>
 
 </manifest>

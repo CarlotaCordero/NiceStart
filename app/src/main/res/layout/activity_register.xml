@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_login"
+    android:onClick="openMain"
     tools:context=".Register">
 
     <ImageView
@@ -14,14 +15,14 @@
         android:scaleType="fitStart"
         android:src="@drawable/hipman"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/izq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.2"/>
+        app:layout_constraintGuide_percent="0.2" />
 
     <ImageView
         android:id="@+id/persona"
@@ -31,80 +32,89 @@
         android:src="@drawable/ic_thunder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintEnd_toStartOf="@id/der"
+        app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintTop_toBottomOf="@id/persona"
         app:startIconDrawable="@drawable/persona">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="Nombre" />
+            android:hint="Nombre"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintEnd_toStartOf="@id/der"
+        app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintTop_toBottomOf="@id/nombre"
         app:startIconDrawable="@drawable/mail">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="email" />
+            android:hint="email"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/contrasena"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintEnd_toStartOf="@id/der"
+        app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintTop_toBottomOf="@id/email"
         app:startIconDrawable="@drawable/candado">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="Contraseña" />
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/confcontrasena"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintEnd_toStartOf="@id/der"
+        app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintTop_toBottomOf="@id/contrasena"
         app:startIconDrawable="@drawable/confir">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="Confirma tu contraseña" />
+            android:hint="Confirma tu contraseña"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/singup"
+        style="@style/buttonOutline"
+        android:onClick="openMain"
         android:text="Sign Up"
-        app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintEnd_toStartOf="@id/der"
-        app:layout_constraintTop_toBottomOf="@id/confcontrasena"
-        style="@style/buttonOutline" />
+        app:layout_constraintStart_toEndOf="@id/izq"
+        app:layout_constraintTop_toBottomOf="@id/confcontrasena" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/der"
