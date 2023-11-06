@@ -28,7 +28,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="48dp"
-        android:src="@drawable/persona_register"
+        android:src="@drawable/ic_thunder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -104,8 +104,7 @@
         app:layout_constraintStart_toEndOf="@id/izq"
         app:layout_constraintEnd_toStartOf="@id/der"
         app:layout_constraintTop_toBottomOf="@id/confcontrasena"
-        style="@style/buttonOutline"
-        android:layout_marginTop="16dp"/>
+        style="@style/buttonOutline" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/der"
