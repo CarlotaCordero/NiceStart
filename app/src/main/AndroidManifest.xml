@@ -25,13 +25,13 @@
 
         <activity
             android:name=".Register"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".Login"
             android:theme="@style/ThemeActionBar.NiceStart"/>
 
         <activity
             android:name=".MainActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/ThemeActionBar.NiceStart" />
 
     </application>
