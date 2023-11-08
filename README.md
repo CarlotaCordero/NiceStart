@@ -47,9 +47,9 @@ Lo que diferencia esta ventana de la anterior es el **Action Bar** superior el c
 
 En caso de pulsar en *Sign Up* nos mandaria al *Main Activity*.
 
-![Captura del Main Activity](img/Screenshot_20231106_140118.png)
+![Captura del Main Activity](img/Screenshot_20231108_135604.png)
 
-Como sucedía en el *Register* tenemos un **Action Bar** en la parte superior pero con la vista en blanco. A la hora de utilizar las **Flags** esto nos permite no tener que volver a la pantalla de *Login*.
+Como sucedía en el *Register* tenemos un **Action Bar** en la parte superior, he añadido unos pocos elementos para no mostrar una vista vacía. A la hora de utilizar las **Flags** esto nos permite no tener que volver a la pantalla de *Login*.
 
 Seguid atentos para nuevas actualizaciones :octocat:.
 
