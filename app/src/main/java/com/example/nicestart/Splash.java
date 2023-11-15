@@ -2,8 +2,10 @@ package com.example.nicestart;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -15,7 +17,7 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        //Declaramos la imagen de fondo
         ImageView photoSplash = findViewById(R.id.fondoSplash);
         Glide.with(this)
                 //Cargamos con la URL
@@ -28,5 +30,21 @@ public class Splash extends AppCompatActivity {
                 .centerCrop()
                 //Insrta la foto en mi ImageView
                 .into(photoSplash);
+        //Lanzamos a la otra aplicacion con esta funcion
+        openApp();
+
+    }
+
+    private void openApp() {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(Splash.this, Login.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+        }, 5000);
     }
 }
