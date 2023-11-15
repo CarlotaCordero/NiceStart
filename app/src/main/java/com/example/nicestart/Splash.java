@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
 public class Splash extends AppCompatActivity {
@@ -28,11 +31,16 @@ public class Splash extends AppCompatActivity {
                 .placeholder(new ColorDrawable(this.getResources().getColor(R.color.fucsia_200)))
                 //Centra la foto y recorta los bordes
                 .centerCrop()
+                //La guardamos en cache
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 //Insrta la foto en mi ImageView
                 .into(photoSplash);
+        ImageView icono = findViewById(R.id.icono);
+        Animation animation  = AnimationUtils.loadAnimation(
+                this, R.anim.animacion_zoom_in);
+        icono.startAnimation(animation);
         //Lanzamos a la otra aplicacion con esta funcion
         openApp();
-
     }
 
     private void openApp() {

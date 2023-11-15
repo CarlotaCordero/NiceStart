@@ -2,6 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.NiceStart" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
+        <!--Con esto se elimina la animacion preestablecida-->
+        <item name="android:windowIsTranslucent">true</item>
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -16,6 +18,8 @@
 
     <style name="ThemeActionBar.NiceStart" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
+        <!--Con esto se elimina la animacion preestablecida-->
+        <item name="android:windowIsTranslucent">true</item>
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
