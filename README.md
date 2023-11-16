@@ -2,7 +2,7 @@
 
 Vamos a trabajar en este proyecto a lo largo del curso.
 
-![Logo de la app](img\icono.jpg)
+![Logo de la app](img\icono.png)
 
 Ahora mismo el proyecto consta de:
 1. Un Activity Login
