@@ -15,6 +15,9 @@
         android:theme="@style/Theme.NiceStart"
         tools:targetApi="31">
         <activity
+            android:name=".Valoracion"
+            android:exported="false" />
+        <activity
             android:name=".Nopeople"
             android:exported="true"
             android:theme="@style/ThemeActionBar.NiceStart" />
