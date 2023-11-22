@@ -17,7 +17,7 @@ public class Valoracion extends AppCompatActivity {
         setContentView(R.layout.activity_valoracion);
 
         ratingBar = (RatingBar) findViewById(R.id.Puntuacion);
-        Alerta = (Button) findViewById(R.id.Alert);
+        /*Alerta = (Button) findViewById(R.id.Alert);*/
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
