@@ -1,20 +1,63 @@
-## Este es mi primer gran proyecto en Android Estudio
+# Este es mi primer gran proyecto en Android Estudio
 
 Vamos a trabajar en este proyecto a lo largo del curso.
 
-![Logo de la app](img\icono.png)
+![Logo de la app](img\icono.jpg)
 
-Ahora mismo el proyecto consta de:
-1. Un Activity Login
-2. Un Activity Register
-3. Un Main Activity
+El proyecto consta de:
+1. Un Activity Launcher.
+2. Un Activity Login.
+3. Un Activity Register.
+4. Un Activity Main.
+5. Un Activity Refresh
 
-Los cuales hemos desarrollado en un par de semanas.
+### Activity Launcher
 
+![Captura del Launcher](img/inicioApp.png)
+
+Esta vista se muestra en primera instancia con un color sólido, que se va desvaneciendo y da paso a un fondo que va a ser una imagen cargada con *Glide* y aparecera una animacion de tipo *Zoom_in* en la parte inferior de la vista.
+
+Despuede de unos segundo se dara paso a la vista de ***activity_login***.
+
+```JAVA
+public class Splash extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_splash);
+        //Declaramos la imagen de fondo
+        ImageView photoSplash = findViewById(R.id.fondoSplash);
+        Glide.with(this)
+                //Cargamos con la URL
+                .load("url de la imagen")
+                //Transicion mientras se puede obtener la imagen con la URL
+                .transition(DrawableTransitionOptions.withCrossFade(2000))
+                //Que se va a mostrar hasta que se cargue la imagen
+                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.fucsia_200)))
+                //Centra la foto y recorta los bordes
+                .centerCrop()
+                //La guardamos en cache
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                //Insrta la foto en mi ImageView
+                .into(photoSplash);
+        ImageView icono = findViewById(R.id.icono);
+        Animation animation  = AnimationUtils.loadAnimation(
+                this, R.anim.animacion_zoom_in);
+        icono.startAnimation(animation);
+        //Lanzamos a la otra aplicacion con esta funcion
+        openApp();
+    }
+    
+}
+```
+
+### Activity Login
 ![Captura del Login](img/Screenshot_20231106_140053.png)
 
-Vamos a tener nuestro ***XML*** el cual nos permitió dar un formato a la ventena, mientras que en el ***.java*** pudimos darle funcionalidad a los botones
+En esta pantalla se muestra un campo para introducir un *Usuario* y una *Contraseña* y dos botones diferentes que nos llevaran a la vista ***activity_main*** y a la vista ***activity_login*** respectivamente.
 
+Para unir las vistas lo realizamos de la siguiente forma en el ***Login.java***.
 ```JAVA
 public class Login extends AppCompatActivity {
 
@@ -40,16 +83,27 @@ public class Login extends AppCompatActivity {
 ```
 Esto nos permite crear los ***Intent*** necesarios para poder dar funcionalidad a la applicación.
 
+### Activity Login
 
 ![Captura del Register](img/Screenshot_20231106_140108.png)
 
-Lo que diferencia esta ventana de la anterior es el **Action Bar** superior el cual nos permite volver a la ventana de *Login* pulsando en la flecha.
+En esta pantalla se encuentran los campos necesarios para realizar el registro de un neuvo usuario en la aplicación, el boton de **Sing Up** nos llevara a la vista del ***activity_main***.
 
-En caso de pulsar en *Sign Up* nos mandaria al *Main Activity*.
+Lo que diferencia esta ventana de la anterior es el **Action Bar** superior el cual nos permite volver a la ventana de ***activity_login*** pulsando en la flecha.
 
-![Captura del Main Activity](img/Screenshot_20231108_135604.png)
+### Activity Main
 
-Como sucedía en el *Register* tenemos un **Action Bar** en la parte superior, he añadido unos pocos elementos para no mostrar una vista vacía. A la hora de utilizar las **Flags** esto nos permite no tener que volver a la pantalla de *Login*.
+![Captura del Main Activity](img/nuevoMain.png)
+
+En esta vista tenemos una **ScrollView** la cual nos permite navegar entre los diferentes contactos que tenemos, ademas de incluir un **FloatButton** sobre un **BottomAppBar**.
+
+Como sucedía en el ***activity_register*** tenemos un **Action Bar** en la parte superior, pero esta no cuenta con la flecha de retroceso.
+
+### Activity Refresh
+
+![Captura del Main Refresh](img/noPeople.png)
+
+En esta vista se muestra un **WebView** en la cual si refrescamos la vista cambiará generando otra imagen diferente y mostrando un **Toast** con un mensaje indicando que la persona que aparece no existe.
 
 Seguid atentos para nuevas actualizaciones :octocat:.
 
