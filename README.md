@@ -107,11 +107,7 @@ En esta vista se muestra un **WebView** en la cual si refrescamos la vista cambi
 
 Se ha trabajado tambien con **PullRequest**, realicé uno a mi compañero [Nacho](https://github.com/Nachiitoo3/AroundGitFinal/network) como se puede ver en su **Network graph** y además el realizo otro en [mi proyecto](https://github.com/CarlotaCordero/NiceStart/network). Ambos realizamos animaciones nuevas para el proyecto del otro.
 
-
-
 https://github.com/CarlotaCordero/NiceStart/assets/131857912/ce1b21df-a466-48ce-b692-17b9bcdf66f1
-
-
 
 Seguid atentos para nuevas actualizaciones :octocat:.
 
