@@ -106,12 +106,8 @@ Como sucedía en el ***activity_register*** tenemos un **Action Bar** en la part
 En esta vista se muestra un **WebView** en la cual si refrescamos la vista cambiará generando otra imagen diferente y mostrando un **Toast** con un mensaje indicando que la persona que aparece no existe.
 
 Se ha trabajado tambien con **PullRequest**, realicé uno a mi compañero [Nacho](https://github.com/Nachiitoo3/AroundGitFinal/network) como se puede ver en su **Network graph** y además el realizo otro en [mi proyecto](https://github.com/CarlotaCordero/NiceStart/network). Ambos realizamos animaciones nuevas para el proyecto del otro.
-<div>
-<iframe src="img\videoUso.webm" width="200px" height="200px">
-    </iframe>
-</div>
 
-
+<iframe src="img\videoUso.webm" width="200px" height="200px"></iframe>
 
 Seguid atentos para nuevas actualizaciones :octocat:.
 
