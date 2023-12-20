@@ -6,6 +6,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -77,4 +78,35 @@ public class Nopeople extends AppCompatActivity {
             return super.onContextItemSelected(item);
         }
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_appbar, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        //noinspection SimplifiableIfStatement
+        /*if (id == R.id.action_settings) {
+            return true;
+        }*/
+        if (id == R.id.action_settings) {
+            Toast toast = Toast.makeText(this,"Action Setting",Toast.LENGTH_LONG );
+            toast.show();
+        }
+        if (id == R.id.action_exit) {
+            Toast toast = Toast.makeText(this,"Bye Bye",Toast.LENGTH_LONG );
+            toast.show();
+        }
+        if (id == R.id.action_error) {
+            Toast toast = Toast.makeText(this,"Sorry for that",Toast.LENGTH_LONG );
+            toast.show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }
