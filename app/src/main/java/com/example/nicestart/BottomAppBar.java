@@ -16,7 +16,7 @@ public class BottomAppBar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_app_bar);
 
-        BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
+        //BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
         FloatingActionButton myfab = findViewById(R.id.fab);
 
         //click event en el  FAB
@@ -28,15 +28,15 @@ public class BottomAppBar extends AppCompatActivity {
         });
 
         //click event en el Hamburguer menuset NavigationOnClickListener
-        bottomAppBar.setNavigationOnClickListener(new View.OnClickListener() {
+        /*bottomAppBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(BottomAppBar.this, "Menu clicked", Toast.LENGTH_SHORT).show();
                 //sheetBehavior = BottomSheetBehavior.from(sheet);
             }
-        });
+        });*/
 
-        bottomAppBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        /*bottomAppBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
@@ -49,7 +49,7 @@ public class BottomAppBar extends AppCompatActivity {
                 }
                 return false;
             }
-        });
+        });*/
     }
 
 
