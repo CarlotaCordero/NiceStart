@@ -13,15 +13,18 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        app:showAsAction="" />
+        android:icon="@drawable/persona"
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_exit"
         android:orderInCategory="100"
+        android:icon="@drawable/ojo"
         android:title="@string/action_exit"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_error"
         android:orderInCategory="100"
+        android:icon="@drawable/llaveimg"
         android:title="Repor Error"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 </menu>

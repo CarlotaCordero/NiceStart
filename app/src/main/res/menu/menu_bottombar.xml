@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/mailMenu"
+        android:icon="@drawable/mail"
+        android:title="Mail"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/personaMenu"
+        android:orderInCategory="100"
+        android:title="Hallo"
+        android:icon="@drawable/persona"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ojoMenu"
+        android:orderInCategory="100"
+        android:icon="@drawable/ojo"
+        android:title="See"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/candadoMenu"
+        android:orderInCategory="100"
+        android:icon="@drawable/candado"
+        android:title="Lock"
+        app:showAsAction="always" />
+</menu>
